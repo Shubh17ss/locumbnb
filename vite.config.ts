@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import AutoImport from "unplugin-auto-import/vite";
 
 const isPreview = process.env.IS_PREVIEW ? true : false;
-const repoName = "REPO_NAME"; // ← EXACT GitHub repo name
+const repoName = "locumbnb";
 const isGithubPages = process.env.GITHUB_PAGES === "true";
 
 const base = isGithubPages ? `/${repoName}/` : "/";
