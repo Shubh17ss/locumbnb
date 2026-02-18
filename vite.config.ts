@@ -3,11 +3,10 @@ import react from "@vitejs/plugin-react-swc";
 import { resolve } from "node:path";
 import AutoImport from "unplugin-auto-import/vite";
 
+const base = process.env.BASE_PATH || "/";
 const isPreview = process.env.IS_PREVIEW ? true : false;
-const repoName = "locumbnb";
-const isGithubPages = process.env.GITHUB_PAGES === "true";
 
-const base = isGithubPages ? `/${repoName}/` : "/";
+
 // https://vite.dev/config/
 export default defineConfig({
   define: {
@@ -72,7 +71,7 @@ export default defineConfig({
   base,
   build: {
     sourcemap: true,
-    outDir: "out",
+    outDir: "dist",
   },
   resolve: {
     alias: {
